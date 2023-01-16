@@ -1,19 +1,29 @@
 import React from "react";
 import "./Widgets.css";
+import Button from '@mui/material/Button';
 import {
   TwitterTimelineEmbed,
   TwitterShareButton,
   TwitterTweetEmbed,
 } from "react-twitter-embed";
-import SearchIcon from '@mui/icons-material/Search';
+import CircleNotificationsRoundedIcon from '@mui/icons-material/CircleNotificationsRounded';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 function Widgets() {
   return (
     <div className="widgets">
-      <div className="widgets__input">
-        <SearchIcon className="widgets__searchIcon" />
-        <input placeholder="Search Truth-Exposed" type="text" />
+      <div className="widgets__icons">
+      <Button 
+      color="primary" 
+      size="large" 
+      startIcon={<CircleNotificationsRoundedIcon className="widgets__searchIcon" />}>
+      </Button>
+      <Button 
+      color="primary" 
+      size="large" 
+      startIcon={ <AccountCircleIcon className="widgets__searchIcon" />}>
+      </Button>
       </div>
 
       <div className="widgets__widgetContainer">

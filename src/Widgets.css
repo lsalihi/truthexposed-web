@@ -2,23 +2,18 @@
     flex: 0.3;
   }
   
-  .widgets__input {
+  .widgets__icons {
     display: flex;
-    align-items: center;
-    background-color: var(--twitter-background);
-    padding: 10px;
-    border-radius: 20px;
+    justify-content: flex-end;
     margin-top: 10px;
-    margin-left: 20px;
-  }
-  
-  .widgets__input > input {
-    border: none;
-    background-color: var(--twitter-background);
+    margin-right: 20px;
   }
   
   .widgets__searchIcon {
-    color: gray;
+    color: var(--app-color);
+    font-size: 50px !important;
+    font-weight: 800 !important;
+
   }
   
   .widgets__widgetContainer {

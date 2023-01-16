@@ -1,18 +1,19 @@
 import React, { useState , useEffect } from 'react'
-import { getFirestore } from "firebase/firestore";
 import { collection, getDocs } from "firebase/firestore"; 
 import "./Feed.css"
 import SecretBox from './SecretBox'
 import Post from './Post'
 import "firebase/firestore";
-import app from './firebase';
+import db from './firebase';
+import SearchIcon from '@mui/icons-material/Search';
+
+
 
 function Feed() {
   const[posts, setPosts] = useState ([]);
   
   useEffect(() => {
     const fetchData = async () => {
-      const db = getFirestore(app);
       const postsRef = collection(db, "posts");   
       const querySnapshot = await getDocs(postsRef);
       setPosts(querySnapshot.docs.map((elem) => ({...elem.data(), id: elem.id})));
@@ -26,6 +27,10 @@ function Feed() {
       {/* header  */}
       <div className='feed__header'>
         <h2>Home</h2>
+        <div className="feed__input">
+        <SearchIcon className="feed__searchIcon" />
+        <input placeholder="Search Truth-Exposed" type="text" />
+      </div>
       </div>
       {/* write  post  */}
       <SecretBox />

@@ -6,6 +6,8 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import NorthEastIcon from '@mui/icons-material/NorthEast';
+import Button from '@mui/material/Button';
+
 
 function Post({
     createdDate,
@@ -39,13 +41,30 @@ function Post({
         </div>
         <img 
         src={image}
-        alt='a gif'
+        alt=''
         />
+         <div className="post__themes">
+          <p>#smtg</p>
+          <p>#smtg</p>
+          <p>#smtg</p>
+        </div>
         <div className="post__footer">
-          <KeyboardDoubleArrowUpIcon fontSize='small' />
-          <KeyboardDoubleArrowDownIcon fontSize='small'/>
-          <ChatBubbleOutlineIcon fontSize='small'/>
-          <NorthEastIcon fontSize='small' />
+        <Button 
+        color="primary" 
+        startIcon={<KeyboardDoubleArrowUpIcon fontSize='small' />}>
+        </Button>
+        <Button
+         color="primary" 
+         startIcon={<KeyboardDoubleArrowDownIcon fontSize='small'/>}>
+        </Button> 
+        <Button
+         color="primary" 
+         startIcon={<ChatBubbleOutlineIcon fontSize='small'/>}>
+        </Button> 
+        <Button
+         color="primary" 
+         startIcon={ <NorthEastIcon fontSize='small' />}>
+        </Button>
         </div>
       </div>
 

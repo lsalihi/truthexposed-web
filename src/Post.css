@@ -1,9 +1,13 @@
 .post {
     display: flex;
     align-items: flex-start;
-    border-bottom: 1px solid var(--twitter-background);
-    padding-bottom: 10px;
+    border: 1px solid var(--app-background);
+    border-radius: 20px;
+    box-shadow: 5px 10px 18px #a7a7a7;
+    /* padding-bottom: 5px; */
     padding-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
   
   .post__body {
@@ -18,8 +22,11 @@
   
   .post__footer {
     display: flex;
+    border-top: 1px solid var(--app-background);
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
+    padding-top: 5px;
+    cursor: pointer;
   }
   
   .post__headerDescription {
@@ -46,5 +53,25 @@
   .post__avatar {
     padding: 20px;
   }
+
+  .post__themes{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.post__themes > p {
+    background-color: var(--app-color) !important ;
+    border: none !important;
+    color: white !important;
+    font-weight: 400 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    width: fit-content !important;
+    height: 25px !important;
+    margin-top: 5px !important;
+    margin-left: 5px !important;
+    padding: 5px !important;
+}
 
 
