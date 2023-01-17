@@ -1,10 +1,10 @@
-import './App.css';
+import './Home.css';
 import React from "react"
 import Feed from "./Feed"
 import Sidebar from "./Sidebar";
 import Widgets from './Widgets';
 
-function App() {
+function Home() {
   return (
     <div className="app"> 
       <Sidebar />
@@ -14,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
