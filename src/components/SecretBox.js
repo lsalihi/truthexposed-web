@@ -1,7 +1,7 @@
 import {Avatar, Button } from '@mui/material'
 import React, { useState } from 'react'
 import "./SecretBox.css"
-import db from '../database';
+import {db } from '../firebase';
 import { addDoc, collection } from 'firebase/firestore';
 
 

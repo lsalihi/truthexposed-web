@@ -1,6 +1,5 @@
 import React from "react";
 import "./Sidebar.css";
-import PanoramaPhotosphereSelectIcon from '@mui/icons-material/PanoramaPhotosphereSelect';
 import SidebarOption from "./SidebarOption";
 import HomeIcon from '@mui/icons-material/Home';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
@@ -14,7 +13,7 @@ import { Button } from "@mui/material";
 function Sidebar(){
     return(
         <div className="sidebar">
-             <PanoramaPhotosphereSelectIcon className="sidebar__appIcon" />
+             <img src="/images/logo_icon.png" alt="" />
              <h4>FEEDS</h4>
              <SidebarOption active Icon={HomeIcon} text = "Home "/>
              <SidebarOption Icon={TrendingUpIcon} text = "Popular"/>

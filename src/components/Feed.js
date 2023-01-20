@@ -4,7 +4,7 @@ import "./Feed.css"
 import SecretBox from './SecretBox'
 import Post from './Post'
 import "firebase/firestore";
-import db from "../database"
+import {db} from "../firebase"
 import SearchIcon from '@mui/icons-material/Search';
 
 

@@ -96,9 +96,3 @@ export default Signup
 
 
 
-
-
-  return (
-    
-  );
-}
