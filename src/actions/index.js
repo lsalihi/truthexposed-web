@@ -1,5 +1,5 @@
 import {auth, provider} from "../firebase";
-import { signInWithPopup , GoogleAuthProvider} from "firebase/auth";
+import { signInWithPopup , GoogleAuthProvider, signOut} from "firebase/auth";
 import { SET_USER } from "./actionType";
 
 export const setUser = (payload) => ({
@@ -32,4 +32,15 @@ export function getUserAuth() {
             }
         });
     }
+}
+
+export function signOutAPI() {
+    return(dispatch) => {
+        signOut(auth).then( () => {
+            console.log("signed out")
+            dispatch(setUser(null));
+        }).catch( (error) => {
+            console.log(error.message);
+        });
+    };
 }

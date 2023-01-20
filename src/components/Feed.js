@@ -32,9 +32,7 @@ function Feed() {
         <input placeholder="Search Truth-Exposed" type="text" />
       </div>
       </div>
-      {/* write  post  */}
       <SecretBox />
-      {/* posts */}
       {posts.map((post) => (
         <Post 
         key={post.id}

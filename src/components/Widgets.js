@@ -8,9 +8,13 @@ import {
 } from "react-twitter-embed";
 import CircleNotificationsRoundedIcon from '@mui/icons-material/CircleNotificationsRounded';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { connect } from "react-redux";
+import { signOutAPI } from "../actions";
 
 
-function Widgets() {
+
+const Widgets = (props) => {
   return (
     <div className="widgets">
       <div className="widgets__icons">
@@ -23,6 +27,12 @@ function Widgets() {
       color="primary" 
       size="large" 
       startIcon={ <AccountCircleIcon className="widgets__searchIcon" />}>
+      </Button>
+      <Button
+      onClick={ () => props.signOut()} 
+      color="primary" 
+      size="large" 
+      startIcon={ <LogoutIcon className="widgets__searchIcon" />}>
       </Button>
       </div>
 
@@ -46,4 +56,16 @@ function Widgets() {
   );
 }
 
-export default Widgets;
+const mapStateToProps = (state) => {
+  return {
+    user: state.userState.user ,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  signOut: () => dispatch(signOutAPI()),
+});
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Widgets);
